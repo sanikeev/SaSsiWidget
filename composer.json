@@ -1,0 +1,36 @@
+{
+    "name": "sanikeev/sa-ssi-widget",
+    "description": "Enables ZF2 apps to output SSI tags for a widgetized and highly cacheable application.",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "ssi",
+        "server side includes",
+        "widget"
+    ],
+    "homepage": "https://github.com/sanikeev/SaSsiWidget",
+    "authors": [
+        {
+            "name": "Sergey Anikeyev",
+            "email": "keshbuk@gmail.com",
+        }
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+    },
+    "require-dev": {
+        "mockery/mockery": ">=0.7.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "SaSsiWidget": "src/"
+        },
+        "classmap": [
+            "src/",
+            "Module.php"
+        ]
+    }
+}
+
