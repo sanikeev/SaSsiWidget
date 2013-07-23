@@ -1,0 +1,7 @@
+<phpunit bootstrap="./Bootstrap.php" colors="true">
+  <testsuites>
+    <testsuite name="SaSsiWidget Module Tests">
+      <directory>./SaSsiWidgetTest</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
