@@ -65,8 +65,6 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface {
 		$app = $e->getApplication();
 		$serviceManager = $app->getServiceManager();
 
-		$headers = $app->getRequest()->getHeaders();
-
 		$controllerPluginBroker = $serviceManager->get('ControllerPluginManager');
 		$ssiWidgetPlugin = $controllerPluginBroker->get('ssiWidget');
 		$ssiWidgetPlugin->getEventManager()->attach($serviceManager->get('RouteListener'));
