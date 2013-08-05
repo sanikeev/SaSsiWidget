@@ -62,7 +62,7 @@ class SsiWidget extends AbstractPlugin implements ServiceManagerAwareInterface
      * Set service manager instance
      *
      * @param  ServiceManager $serviceManager
-     * @return EsiWidget
+     * @return SsiWidget
      */
     public function setServiceManager(ServiceManager $serviceManager)
     {
@@ -75,7 +75,7 @@ class SsiWidget extends AbstractPlugin implements ServiceManagerAwareInterface
      * set options
      *
      * @param  ModuleOptions $options
-     * @return EsiWidget
+     * @return SsiWidget
      */
     public function setOptions(ModuleOptions $options)
     {
@@ -101,7 +101,7 @@ class SsiWidget extends AbstractPlugin implements ServiceManagerAwareInterface
     /**
      *
      * @param  bool                                          $surrogateCapability
-     * @return \ScnEsiWidget\Mvc\Controller\Plugin\EsiWidget
+     * @return \SaSsiWidget\Mvc\Controller\Plugin\SsiWidget
      */
     public function setSurrogateCapability($surrogateCapability = true)
     {
@@ -138,7 +138,7 @@ class SsiWidget extends AbstractPlugin implements ServiceManagerAwareInterface
 
         if (!$request instanceof Request) {
             throw new Exception\DomainException(
-                'EsiWidget::addToViewModel expects Zend\Http\Request object or string as 2nd param'
+                'SsiWidget::addToViewModel expects Zend\Http\Request object or string as 2nd param'
             );
         }
 
@@ -215,7 +215,7 @@ class SsiWidget extends AbstractPlugin implements ServiceManagerAwareInterface
 
         if (!$controller instanceof ServiceLocatorAwareInterface) {
             throw new Exception\DomainException(
-                'EsiWidget plugin requires controller implements ServiceLocatorAwareInterface'
+                'SsiWidget plugin requires controller implements ServiceLocatorAwareInterface'
             );
         }
         $locator = $controller->getServiceLocator();

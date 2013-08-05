@@ -79,7 +79,6 @@ class SsiStrategy implements ListenerAggregateInterface
     {
         $renderer = $e->getRenderer();
         if ($renderer !== $this->renderer) {
-            // Discovered renderer is not ours; do nothing
             return;
         }
 
@@ -87,7 +86,5 @@ class SsiStrategy implements ListenerAggregateInterface
         $result   = $e->getResult();
         $response = $e->getResponse();
         $response->setContent($result);
-        $headers = $response->getHeaders();
-//        $headers->addHeaderLine('Surrogate-Control', 'content="ESI/1.0"');
     }
 }
